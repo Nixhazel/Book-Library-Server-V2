@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<%- include('header'); -%>
+
+<form action="/book/updateBookdetail" method="post" class="edithbook">
+    <input type="hidden" name="bookID" required  value="<%=book._id%>">
+    <label for="title">Title</label>
+    <input type="text" name="Title" required  value="<%= book.Title %>">
+    <label for="author">Author</label>
+    <input type="text" name="Author" required  value="<%= book.Author %>">
+    <label for="datePublished">Date Published</label>
+    <input type="date" name="datePublished" required  value="<%= book.datePublished %>">
+    <label for="description">Description</label>
+    <input type="text" name="Description" required value="<%=book.Description%>">
+    <label for="pageCount">Page Count</label>
+    <input type="number" name="pageCount" required  value="<%= book.pageCount %>" >
+    <label for="genre">Genre</label>
+    <input type="text" name="Genre" required  value="<%= book.Genre %>">
+    <label for="publisher">Publisher</label>
+    <input type="text" name="Publisher" required  value="<%= book.Publisher %>">
+    <button class="creatbookbtn">Add book</button>
+</form>
+
+<%- include('footer'); -%>

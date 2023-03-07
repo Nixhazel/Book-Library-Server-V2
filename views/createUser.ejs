@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<%- include('header'); -%>
+
+<form action="/book/createBook" method="post" class="edithbook">
+    <label for="title">Title</label>
+    <input type="text" name="Title" required>
+    <label for="author">Author</label>
+    <input type="text" name="Author" required>
+    <label for="datePublished">Date Published</label>
+    <input type="date" name="datePublished" required>
+    <label for="description">Description</label>
+    <textarea type="text" name="Description" required rows="4" cols="50"></textarea>
+    <label for="pageCount">Page Count</label>
+    <input type="number" name="pageCount" required>
+    <label for="genre">Genre</label>
+    <input type="text" name="Genre" required>
+    <label for="publisher">Publisher</label>
+    <input type="text" name="Publisher" required>
+    <button class="creatbookbtn">Add book</button>
+</form>
+
+<%- include('footer'); -%>

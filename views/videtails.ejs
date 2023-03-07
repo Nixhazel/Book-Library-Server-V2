@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<%- include('header'); -%>
+		<header class="viewDheader">
+			<h1 class="header-text1">DETAILS OF</h1>
+			<h1 class="header-text2">📖. <%= book.Title %> .📖</h1>
+		</header>
+    <hr class="hr">
+    <div class="viewDits">
+      <h3 class="veiwH3">Title :</h3>
+      <p>  <%= book.Title %></p>
+      <h3 class="veiwH3">Author :</h3>
+      <p>  <%= book.Author %></p>
+      <h3 class="veiwH3">Date Published :</h3>
+      <p>  <%= book.datePublished %></p>
+      <h3 class="veiwH3">Description :</h3>
+      <p>  <%= book.Description %></p>
+      <h3 class="veiwH3">Number of Pages :</h3>
+      <p> <%= book.pageCount %></p>
+      <h3 class="veiwH3">Genre :</h3>
+      <p> <%= book.Genre %></p>
+      <h3 class="veiwH3">Publisher :</h3>
+      <p> <%= book.Publisher %></p>
+    </div>
+
+<%- include('footer'); -%>

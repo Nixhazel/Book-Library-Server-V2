@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Login 1</title>
+		<link rel="stylesheet" href="stylesheets/signup.css" />
+	</head>
+	<body>
+		<div class="signup-card">
+			<h2>Signup</h2>
+			<h2>Create Account</h2>
+			<form action = "/users/createUser" class="login-form" method="post">
+				<input id = "signupUsername" type="text" name = "UserName" placeholder="UserName" />
+				<input id = "signupEmail" type="email" name = "email" placeholder="Email" />
+				<input id = "signupPassword" name = "password" type="password" placeholder="Password" />
+				<button id = "signupButton" type="submit">SIGN UP</button>
+			</form>
+			<footer>
+				Existing users, sign in
+				<a href="/users/getAUsers">here </a>
+			</footer>
+		</div>
+<%- include('footer'); -%>

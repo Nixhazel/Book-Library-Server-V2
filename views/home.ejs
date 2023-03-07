@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<%- include('header'); -%>
+		<div class="head">
+			<h1 class="header-text1">WELCOME TO</h1>
+			<h1 class="header-text2">📖. MY LIBRARY .📖</h1>
+			<hr class="hr">
+		</div>
+		<div class="containers">
+
+      <% if( checkings.length > 0) {%> 
+      <% for(let book of checkings ){ %> 
+			<div class="box box-1">
+				<div class="bookdiv">
+					<h2><%= book.Title %> </h2>
+					<p><%= book.Author %> </p>
+					<img src="../imgIcon/WhatsApp Image 2023-01-15 at 3.25.31 PM.jpg" alt="" />
+					<div class="formbuttons">
+						<form action="/book/updateBook" class="inputRUD" method="post">
+							<input type="hidden" value="<%= book._id %>" name="bookID" placeholder="Delete"/>
+							<button class="editbookbtn">Edit</button>
+						</form>
+						<form action="/book/bookDetails" class="inputRUD" method="post">
+							<input type="hidden" value="<%= book._id %>" name="bookID" placeholder="Delete"/>
+							<button class="viewbookbtn">View Details</button>
+						</form>
+						<form action="/book/deleteBook" class="inputRUD" method="post">
+							<input type="hidden" value="<%= book._id %>" name="bookID" placeholder="Delete"/>
+							<button class="creatbookbtn">Delete</button>
+						</form>
+					</div>
+				</div>
+			</div>
+      <% } %> 
+      <% } %> 
+		</div>
+<%- include('footer'); -%>

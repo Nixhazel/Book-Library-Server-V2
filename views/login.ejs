@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Login</title>
+		<link rel="stylesheet" href="stylesheets/login.css" />
+	</head>
+	<body>
+		<div class="login-card">
+			<h2>Login</h2>
+			<h3>Enter your credentials</h3>
+			<form class="login-form" method="post" action="/users/getAUsers">
+				<input id = "loginUsername" name= "UserName" type="text" placeholder="Username" />
+				<input id = "loginPassword" name= "password" type="password" placeholder="Password" />
+				<button id = "loginButton" type="submit">LOGIN</button>
+			</form>
+		</div>
+<%- include('footer'); -%>
